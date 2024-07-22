@@ -1,0 +1,130 @@
+ALEXE ADELINA MARIA - 312CC
+TEMA 3
+
+In rezolvarea temei am implementat taskurile astfel:
+
+Taskul 1:
+Aceasta functie in limbaj de asamblare verifica daca
+parantezele dintr-un sir de caractere sunt corect echilibrate.
+
+Initializare: Se seteaza cadrul stivei si se initializeaza
+o stiva falsa pentru stocarea parantezelor deschise.
+Parcurgerea sirului: Se parcurge fiecare caracter al șirului
+de caractere.
+Verificare si stocare: Daca caracterul este o paranteza
+deschisa ((, {, [), se stocheaza in stiva. Daca este o
+paranteza inchisa (), }, ]), se verifica daca corespunde
+cu ultima paranteza deschisa stocata în stiva.
+Daca corespunde, se elimina paranteza deschisa din stiva.
+Daca nu corespunde, functia returneaza 1 pentru a indica o eroare.
+Finalizare: Daca toate parantezele sunt corect echilibrate,
+functia returneaza 0. Daca exista o eroare, returneaza 1.
+
+check_parantheses: Initializeaza stiva si parcurge sirul.
+push_stack: Stocheaza parantezele deschise.
+pop_stack1/2/3: Verifica si elimina parantezele inchise.
+incorrect: Gestioneaza cazurile de paranteze incorecte.
+done: Returneaza rezultatul (0 sau 1).
+
+Functia utilizeaza o stiva pentru a verifica corectitudinea
+parantezelor intr-un sir de caractere.
+
+Taskul 2:
+
+Subtaskul 1:
+Functia quick_sort in limbaj de asamblare implementeaza algoritmul de sortare
+QuickSort pentru un tablou de intregi.
+
+Inițializare:
+Creeaza cadrul stivei si salveaz registrele.
+Preia adresa tabloului Si indexii de start si de sfarsit.
+
+Verificare de baza:
+Daca start >= end, termina functia (sub-tabloul este sortat sau are un singur
+element). 
+
+Alegerea pivotului:
+Seteaza pivotul ca ultimul element din sub-tablou.
+
+Partitionare:
+Parcurge elementele si separa valorile mai mici sau egale cu pivotul de cele
+mai mari. Schimba elementele cand este necesar.
+
+Apeluri recursive: Apeleaza functia recursiv pentru sub-tabloul stang
+(start pana la pivot - 1) si sub-tabloul drept (pivot + 1 până la end).
+
+Finalizare:
+Restaureaza registrele si incheie functia.
+
+Subtaskul 2:
+
+Funcția binary_search in limbaj de asamblare implementeaza algoritmul de csutare
+binara pentru un tablou sortat de intregi.
+
+Initializare:
+Creeaza cadrul stivei si salveaza registrele.
+Preia indexii de start si de sfarsit din argumentele functiei.
+
+Verificare de baza:
+Daca start >= end, verifica daca elementul unic (dacă exista) este egal cu
+elementul cautat (needle).
+
+Calcularea elementului mijlociu:
+Calculeaza indexul mijlociu si elementul corespunzator din tablou.
+
+Comparare:
+Compara elementul mijlociu cu needle:
+Daca sunt egale, returneaza indexul mijlociu.
+Daca needle este mai mic, cauta recursiv in partea stangă a tabloului.
+Daca needle este mai mare, cauta recursiv in partea dreapta a tabloului.
+
+Finalizare:
+Daca needle nu este gasit, returneaza -1.
+Restaureaza registrele si incheie functia.
+
+Taskul 3:
+
+Functia dfs implementeaza algoritmul de cautare in adancime (DFS)
+pentru un graf, folosind o functie expand pentru a obtine vecinii unui nod.
+Cand un nod este vizitat, acesta este marcat si afisat.
+
+Inițializare:
+
+Salveaza cadrul stivei si registrele.
+Preia argumentele functiei: node (nodul de pornire) si expand
+(functia pentru obținerea vecinilor).
+
+Marcarea nodului vizitat:
+Marcheaza nodul curent ca vizitat in vectorul visited.
+
+Afisarea nodului:
+Imprima nodul curent folosind printf si sirul de format din sectiunea .data.
+
+Obtinerea vecinilor:
+Apeleaza functia expand cu nodul curent pentru a obtine structura neighbours_t,
+care contine numărul de vecini si adresa vectorului de vecini.
+
+Iterarea prin vecini:
+Parcurge lista vecinilor si verifica daca fiecare vecin a fost vizitat.
+Daca un vecin nu a fost vizitat, apeleaza recursiv functia dfs pentru acel
+vecin.
+
+Incheiere:
+Restaureaza registrele si paraseste cadrul stivei.
+
+Task Bonus:
+
+Functia map:
+Aceasta aplica o functie f fiecarui element al unui vector sursa si stocheaza
+rezultatul intr-un vector destinatie.
+Parcurge elementele vectorului sursa.
+Aplica functia data fiecarui element.
+Stocheaza rezultatul in vectorul destinatie.
+
+Functia reduce:
+Aceasta agrega elementele unui vector sursa folosind o functie f, initializata 
+cu o valoare de acumulator data, si returneaza rezultatul final.
+Parcurge elementele vectorului sursa.
+Aplica functia data acumulatorului si elementului curent.
+Actualizeaza acumulatorul cu rezultatul functiei.
+La final, returneaza valoarea acumulatorului.
